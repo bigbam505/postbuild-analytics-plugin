@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jvnet.hudson.plugins.groovypostbuild;
+package org.jvnet.hudson.plugins.globalgroovypostbuild;
 
 import hudson.PluginWrapper;
 import hudson.model.BuildBadgeAction;
@@ -33,7 +33,7 @@ import org.kohsuke.stapler.export.Exported;
 import org.kohsuke.stapler.export.ExportedBean;
 
 @ExportedBean(defaultVisibility=2)
-public class GroovyPostbuildAction implements BuildBadgeAction {
+public class GlobalGroovyPostbuildAction implements BuildBadgeAction {
     private final String iconPath;
     private final String text;
     private String color = "#000000";
@@ -42,27 +42,27 @@ public class GroovyPostbuildAction implements BuildBadgeAction {
     private String borderColor = "#C0C000";
     private String link;
 
-    private GroovyPostbuildAction(String iconPath, String text) {
+    private GlobalGroovyPostbuildAction(String iconPath, String text) {
     	this.iconPath = iconPath;
     	this.text = text;
     }
 
-    public static GroovyPostbuildAction createBadge(String icon, String text) {
-    	return new GroovyPostbuildAction(getIconPath(icon), text);
+    public static GlobalGroovyPostbuildAction createBadge(String icon, String text) {
+    	return new GlobalGroovyPostbuildAction(getIconPath(icon), text);
     }
 
-    public static GroovyPostbuildAction createBadge(String icon, String text, String link) {
-    	GroovyPostbuildAction action =  new GroovyPostbuildAction(getIconPath(icon), text);
+    public static GlobalGroovyPostbuildAction createBadge(String icon, String text, String link) {
+    	GlobalGroovyPostbuildAction action =  new GlobalGroovyPostbuildAction(getIconPath(icon), text);
 		action.link = link;
 		return action;
     }
 
-    public static GroovyPostbuildAction createShortText(String text) {
-    	return new GroovyPostbuildAction(null, text);
+    public static GlobalGroovyPostbuildAction createShortText(String text) {
+    	return new GlobalGroovyPostbuildAction(null, text);
     }
 
-    public static GroovyPostbuildAction createShortText(String text, String color, String background, String border, String borderColor) {
-    	GroovyPostbuildAction action =  new GroovyPostbuildAction(null, text);
+    public static GlobalGroovyPostbuildAction createShortText(String text, String color, String background, String border, String borderColor) {
+    	GlobalGroovyPostbuildAction action =  new GlobalGroovyPostbuildAction(null, text);
     	action.color = color;
     	action.background = background;
     	action.border = border;
@@ -70,16 +70,16 @@ public class GroovyPostbuildAction implements BuildBadgeAction {
     	return action;
     }
 
-    public static GroovyPostbuildAction createInfoBadge(String text) {
-    	return new GroovyPostbuildAction(getIconPath("info.gif"), text);
+    public static GlobalGroovyPostbuildAction createInfoBadge(String text) {
+    	return new GlobalGroovyPostbuildAction(getIconPath("info.gif"), text);
     }
 
-    public static GroovyPostbuildAction createWarningBadge(String text) {
-    	return new GroovyPostbuildAction(getIconPath("warning.gif"), text);
+    public static GlobalGroovyPostbuildAction createWarningBadge(String text) {
+    	return new GlobalGroovyPostbuildAction(getIconPath("warning.gif"), text);
     }
 
-    public static GroovyPostbuildAction createErrorBadge(String text) {
-    	return new GroovyPostbuildAction(getIconPath("error.gif"), text);
+    public static GlobalGroovyPostbuildAction createErrorBadge(String text) {
+    	return new GlobalGroovyPostbuildAction(getIconPath("error.gif"), text);
     }
 
     /* Action methods */
@@ -100,7 +100,7 @@ public class GroovyPostbuildAction implements BuildBadgeAction {
 		if(icon == null) return null;
 		if(icon.startsWith("/")) return icon;
 		// Try plugin images dir, fallback to Hudson images dir
-		PluginWrapper wrapper = Hudson.getInstance().getPluginManager().getPlugin(GroovyPostbuildPlugin.class);
+		PluginWrapper wrapper = Hudson.getInstance().getPluginManager().getPlugin(GlobalGroovyPostbuildPlugin.class);
 		boolean pluginIconExists = (wrapper != null) && new File(wrapper.baseResourceURL.getPath() + "/images/" + icon).exists();
 		return pluginIconExists ? "/plugin/" + wrapper.getShortName() + "/images/" + icon : Hudson.RESOURCE_PATH + "/images/16x16/" + icon;
     }

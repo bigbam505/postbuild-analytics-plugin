@@ -1,4 +1,4 @@
-package org.jvnet.hudson.plugins.groovypostbuild;
+package org.jvnet.hudson.plugins.globalgroovypostbuild;
 
 import hudson.Extension;
 import hudson.model.AbstractDescribableImpl;
@@ -10,12 +10,12 @@ import java.io.File;
 /**
  * @author <a href="mailto:nicolas.deloof@cloudbees.com">Nicolas De loof</a>
  */
-public class GroovyScriptPath extends AbstractDescribableImpl<GroovyScriptPath> {
+public class GlobalGroovyScriptPath extends AbstractDescribableImpl<GlobalGroovyScriptPath> {
 
     private final File path;
 
     @DataBoundConstructor
-    public GroovyScriptPath(String path) {
+    public GlobalGroovyScriptPath(String path) {
         this.path = new File(path).getAbsoluteFile();
     }
 
@@ -24,7 +24,7 @@ public class GroovyScriptPath extends AbstractDescribableImpl<GroovyScriptPath> 
     }
 
     @Extension
-    public static class GroovyScriptPathDescriptor extends Descriptor<GroovyScriptPath> {
+    public static class GroovyScriptPathDescriptor extends Descriptor<GlobalGroovyScriptPath> {
 
         @Override
         public String getDisplayName() {

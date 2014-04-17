@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jvnet.hudson.plugins.groovypostbuild;
+package org.jvnet.hudson.plugins.globalgroovypostbuild;
 
 import java.io.IOException;
 import java.util.List;
@@ -34,14 +34,14 @@ import hudson.model.Action;
 import hudson.model.Job;
 import hudson.model.Run;
 
-public class GroovyPostbuildPlugin extends Plugin {
+public class GlobalGroovyPostbuildPlugin extends Plugin {
 
     public void doRemoveBadges(StaplerRequest req, StaplerResponse rsp) throws IOException {
-    	removeActions(GroovyPostbuildAction.class, req, rsp);
+    	removeActions(GlobalGroovyPostbuildAction.class, req, rsp);
 	}
 
     public void doRemoveSummaries(StaplerRequest req, StaplerResponse rsp) throws IOException {
-    	removeActions(GroovyPostbuildSummaryAction.class, req, rsp);
+    	removeActions(GlobalGroovyPostbuildSummaryAction.class, req, rsp);
 	}
     
     @SuppressWarnings("unchecked")
@@ -60,11 +60,11 @@ public class GroovyPostbuildPlugin extends Plugin {
 	}
     
     public void doRemoveBadge(StaplerRequest req, StaplerResponse rsp) throws IOException {
-    	removeAction(GroovyPostbuildAction.class, req, rsp);
+    	removeAction(GlobalGroovyPostbuildAction.class, req, rsp);
 	}
 
     public void doRemoveSummary(StaplerRequest req, StaplerResponse rsp) throws IOException {
-    	removeAction(GroovyPostbuildSummaryAction.class, req, rsp);
+    	removeAction(GlobalGroovyPostbuildSummaryAction.class, req, rsp);
 	}
     
     @SuppressWarnings("unchecked")

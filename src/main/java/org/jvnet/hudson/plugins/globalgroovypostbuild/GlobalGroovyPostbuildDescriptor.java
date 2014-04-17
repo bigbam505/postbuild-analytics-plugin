@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jvnet.hudson.plugins.groovypostbuild;
+package org.jvnet.hudson.plugins.globalgroovypostbuild;
 
 import net.sf.json.JSONObject;
 
@@ -34,7 +34,7 @@ import hudson.tasks.BuildStepDescriptor;
 import hudson.tasks.Publisher;
 
 @Extension
-public class GroovyPostbuildDescriptor extends BuildStepDescriptor<Publisher> {
+public class GlobalGroovyPostbuildDescriptor extends BuildStepDescriptor<Publisher> {
 
 	private boolean enableSecurity = false;
         private String groovyScript;
@@ -43,8 +43,8 @@ public class GroovyPostbuildDescriptor extends BuildStepDescriptor<Publisher> {
     /**
      * Constructs a {@link GroovyPostbuildDescriptor}.
      */
-    public GroovyPostbuildDescriptor() {
-        super(GroovyPostbuildRecorder.class);
+    public GlobalGroovyPostbuildDescriptor() {
+        super(GlobalGroovyPostbuildRecorder.class);
     }
 
     /**
@@ -53,7 +53,7 @@ public class GroovyPostbuildDescriptor extends BuildStepDescriptor<Publisher> {
      */
     @Override
     public final String getDisplayName() {
-        return "Groovy Postbuild";
+        return "Global Groovy Postbuild";
     }
 
     @Override

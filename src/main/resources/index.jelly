@@ -23,5 +23,5 @@ THE SOFTWARE.
 -->
 
 <div>
-  Groovy postbuild task.
+  Global Groovy postbuild task.
 </div>

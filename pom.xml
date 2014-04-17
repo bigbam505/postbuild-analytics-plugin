@@ -6,12 +6,12 @@
     <version>1.466</version>
   </parent>
 
-    <name>Groovy Postbuild</name>
+    <name>Global Groovy Postbuild</name>
     <groupId>org.jvnet.hudson.plugins</groupId>
-    <artifactId>groovy-postbuild</artifactId>
-    <version>1.9-SNAPSHOT</version>
+    <artifactId>global-groovy-postbuild</artifactId>
+    <version>0.1-SNAPSHOT</version>
     <packaging>hpi</packaging>
-    <url>http://wiki.jenkins-ci.org/display/JENKINS/Groovy+Postbuild+Plugin</url>
+    <url>http://wiki.jenkins-ci.org/display/JENKINS/Global+Groovy+Postbuild+Plugin</url>
 
     <developers>
       <developer>
@@ -22,12 +22,16 @@
         <id>beryx</id>
         <name>Serban Iordache</name>
       </developer>
+      <developer>
+        <id>bigbam505</id>
+        <name>Brent Montague</name>
+      </developer>
     </developers>
     
   <scm>
-    <connection>scm:git:git://github.com/jenkinsci/groovy-postbuild-plugin.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/groovy-postbuild-plugin.git</developerConnection>
-    <url>https://github.com/jenkinsci/groovy-postbuild-plugin</url>
+    <connection>scm:git:git://github.com/bigbam505/global-groovy-postbuild-plugin.git</connection>
+    <developerConnection>scm:git@github.com:bigbam505/global-groovy-postbuild-plugin.git</developerConnection>
+    <url>https://github.com/bigbam505/global-groovy-postbuild-plugin</url>
   </scm>
 
   <repositories>

@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jvnet.hudson.plugins.groovypostbuild;
+package org.jvnet.hudson.plugins.globalgroovypostbuild;
 
 import hudson.model.Action;
 
@@ -30,11 +30,11 @@ import org.kohsuke.stapler.export.Exported;
 import org.kohsuke.stapler.export.ExportedBean;
 
 @ExportedBean(defaultVisibility=2)
-public class GroovyPostbuildSummaryAction implements Action {
+public class GlobalGroovyPostbuildSummaryAction implements Action {
     private final String iconPath;
     private final StringBuilder textBuilder = new StringBuilder();
 
-    public GroovyPostbuildSummaryAction(String iconPath) {
+    public GlobalGroovyPostbuildSummaryAction(String iconPath) {
     	this.iconPath = iconPath;
     }
     
