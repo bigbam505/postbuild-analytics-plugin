@@ -39,6 +39,7 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -249,17 +250,13 @@ public class GroovyPostbuildRecorder extends Recorder implements MatrixAggregata
 	}
 
 	@DataBoundConstructor
-	public GroovyPostbuildRecorder(String groovyScript, List<GroovyScriptPath> classpath, int behavior, boolean runForMatrixParent) {
-		this.groovyScript = groovyScript;
-        this.classpath = classpath;
-		this.behavior = behavior;
-		this.runForMatrixParent = runForMatrixParent;
+	public GroovyPostbuildRecorder() {
+                this.groovyScript = this.getDescriptor().getGroovyScript();
+                this.classpath = new ArrayList<GroovyScriptPath>();
+		this.behavior = this.getDescriptor().getFailureBehavior();
+		this.runForMatrixParent = false;
 		LOGGER.fine("GroovyPostbuildRecorder created with groovyScript:\n" + groovyScript);
 		LOGGER.fine("GroovyPostbuildRecorder behavior:" + behavior);
-	}
-
-	public GroovyPostbuildRecorder(String groovyScript, List<GroovyScriptPath> classpath, int behavior) {
-		this(groovyScript, classpath, behavior, false);
 	}
 
 	@Override

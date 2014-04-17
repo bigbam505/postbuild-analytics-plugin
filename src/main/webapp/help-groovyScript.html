@@ -1,6 +1,4 @@
-<?jelly escape-by-default='true'?>
-<l:ajax xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
-  <div>
+<div>
       Executes a groovy script in the Jenkins JVM. Typically, the script checks some conditions and changes accordingly the build result, puts badges next to the build in the build history and/or displays information on the build summary page.
   <br/>The groovy script can use the variable <i>manager</i>, which provides access to the following objects and methods:
   <ul>
@@ -41,4 +39,3 @@
     }</code></pre>
   See <a href="https://wiki.jenkins-ci.org/display/JENKINS/Groovy+Postbuild+Plugin">Jenkins Wiki</a> for more information.
 </div>
-</l:ajax>

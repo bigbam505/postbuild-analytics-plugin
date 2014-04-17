@@ -37,6 +37,8 @@ import hudson.tasks.Publisher;
 public class GroovyPostbuildDescriptor extends BuildStepDescriptor<Publisher> {
 
 	private boolean enableSecurity = false;
+        private String groovyScript;
+        private int failureBehavior;
 
     /**
      * Constructs a {@link GroovyPostbuildDescriptor}.
@@ -74,11 +76,21 @@ public class GroovyPostbuildDescriptor extends BuildStepDescriptor<Publisher> {
     @Override
     public boolean configure(StaplerRequest req, JSONObject formData) throws FormException {
         enableSecurity = formData.getBoolean("enableGroovyPostBuildSecurity");
+        groovyScript = formData.getString("groovyScript");
+        failureBehavior = formData.getInt("failureBehavior");
         save();
         return super.configure(req,formData);
     }
     public boolean isSecurityEnabled(){
     	return enableSecurity;
+    }
+    
+    public String getGroovyScript(){
+    	return groovyScript;
+    }
+    
+    public int getFailureBehavior(){
+        return failureBehavior;
     }
     
     /**
