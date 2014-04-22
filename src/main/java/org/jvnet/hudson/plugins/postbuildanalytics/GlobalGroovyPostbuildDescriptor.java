@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jvnet.hudson.plugins.globalgroovypostbuild;
+package org.jvnet.hudson.plugins.postbuildanalytics;
 
 import net.sf.json.JSONObject;
 
@@ -53,7 +53,7 @@ public class GlobalGroovyPostbuildDescriptor extends BuildStepDescriptor<Publish
      */
     @Override
     public final String getDisplayName() {
-        return "Global Groovy Postbuild";
+        return "Postbuild Analytics";
     }
 
     @Override

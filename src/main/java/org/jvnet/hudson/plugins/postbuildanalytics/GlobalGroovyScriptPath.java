@@ -1,4 +1,4 @@
-package org.jvnet.hudson.plugins.globalgroovypostbuild;
+package org.jvnet.hudson.plugins.postbuildanalytics;
 
 import hudson.Extension;
 import hudson.model.AbstractDescribableImpl;

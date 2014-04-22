@@ -6,12 +6,12 @@
     <version>1.466</version>
   </parent>
 
-    <name>Global Groovy Postbuild</name>
+    <name>Postbuild Analytics</name>
     <groupId>org.jvnet.hudson.plugins</groupId>
-    <artifactId>global-groovy-postbuild</artifactId>
+    <artifactId>postbuild-analytics</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>hpi</packaging>
-    <url>http://wiki.jenkins-ci.org/display/JENKINS/Global+Groovy+Postbuild+Plugin</url>
+    <url>http://wiki.jenkins-ci.org/display/JENKINS/Postbuild+Analytics+Plugin</url>
 
     <developers>
       <developer>

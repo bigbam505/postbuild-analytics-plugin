@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jvnet.hudson.plugins.globalgroovypostbuild;
+package org.jvnet.hudson.plugins.postbuildanalytics;
 
 import java.io.IOException;
 import java.util.List;

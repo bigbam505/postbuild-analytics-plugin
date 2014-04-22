@@ -22,12 +22,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
-  <f:section title="${%Global Groovy Postbuild}">
-    <f:entry title="${%Enable groovy postbuild security}" help="/plugin/global-groovy-postbuild/help-enableGroovyPostBuildSecurity.html">
+  <f:section title="${%Postbuild Analytics}">
+    <f:entry title="${%Enable postbuild security}" help="/plugin/postbuild-analytics/help-enableGroovyPostBuildSecurity.html">
       <f:checkbox name="enableGroovyPostBuildSecurity" checked="${descriptor.isSecurityEnabled()}" title="check if access to internal object should be disallowed in postbuild scripts"/>
     </f:entry>
 
-    <f:entry title="Groovy script:" help="/plugin/global-groovy-postbuild/help-groovyScript.html">
+    <f:entry title="Groovy script:" help="/plugin/postbuild-analytics/help-groovyScript.html">
         <f:textarea field="groovyScript" />
     </f:entry>
 
